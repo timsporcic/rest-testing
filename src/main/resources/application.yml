@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: Spring Boot REST Testing
+
+server:
+  port: 8080
+
+management:
+  info:
+    git:
+      mode: full
+      enabled: true
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    web:
+      server:
+        request:
+          autotime:
+            enabled: false
+
+
+
+
